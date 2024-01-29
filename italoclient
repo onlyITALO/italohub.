@@ -3,7 +3,7 @@ local Window = OrionLib:MakeWindow({Name = "ITALO CLIENT", HidePremium = false, 
 
 
 local ITALOTab = Window:MakeTab({
-    Name = "RESOLUÇÕES",
+    Name = "TELA-ESTICADA",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -187,8 +187,52 @@ getgenv().gg_scripters = "Aori0001"
 })
 
 
+ITALOTab = Window:MakeTab({
+    Name = "VELOCIDADE",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+
+ITALOTab:AddButton({
+    Name = "VELOCIDADE PADRÃO",
+    Callback = function()
+              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+      end    
+})
+
+
+ITALOTab:AddButton({
+    Name = "VELOCIDADE 2X",
+    Callback = function()
+              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
+      end    
+})
+
+ITALOTab:AddButton({
+    Name = "VELOCIDADE 4X",
+    Callback = function()
+              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 64
+      end    
+})
+
+ITALOTab:AddButton({
+    Name = "VELOCIDADE 6X",
+    Callback = function()
+              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 128
+      end    
+})
+
+ITALOTab:AddButton({
+    Name = "VELOCIDADE 8X",
+    Callback = function()
+              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 236
+      end    
+})
+
+
 local ITALOTab = Window:MakeTab({
-    Name = "ÚTEIS",
+    Name = "UTILIDADES",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
@@ -337,7 +381,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 Title = "DISCORD";
 Text = "fire_clahs#0000";
 Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-Duration = 5; 
+Duration = 15; 
 
 Frame.Active = true -- main = gui
 Frame.Draggable = true 
@@ -675,63 +719,63 @@ end)
 
 
 ITALOTab:AddButton({
-    Name = "Ant-Lag",
+    Name = "ANT-LAG",
     Callback = function()
               local ToDisable = {
-	Textures = true,
-	VisualEffects = true,
-	Parts = true,
-	Particles = true,
-	Sky = true
+    Textures = true,
+    VisualEffects = true,
+    Parts = true,
+    Particles = true,
+    Sky = true
 }
 
 local ToEnable = {
-	FullBright = false
+    FullBright = false
 }
 
 local Stuff = {}
 
 for _, v in next, game:GetDescendants() do
-	if ToDisable.Parts then
-		if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then
-			v.Material = Enum.Material.SmoothPlastic
-			table.insert(Stuff, 1, v)
-		end
-	end
-	
-	if ToDisable.Particles then
-		if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
-			v.Enabled = false
-			table.insert(Stuff, 1, v)
-		end
-	end
-	
-	if ToDisable.VisualEffects then
-		if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
-			v.Enabled = false
-			table.insert(Stuff, 1, v)
-		end
-	end
-	
-	if ToDisable.Textures then
-		if v:IsA("Decal") or v:IsA("Texture") then
-			v.Texture = ""
-			table.insert(Stuff, 1, v)
-		end
-	end
-	
-	if ToDisable.Sky then
-		if v:IsA("Sky") then
-			v.Parent = nil
-			table.insert(Stuff, 1, v)
-		end
-	end
+    if ToDisable.Parts then
+        if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then
+            v.Material = Enum.Material.SmoothPlastic
+            table.insert(Stuff, 1, v)
+        end
+    end
+    
+    if ToDisable.Particles then
+        if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
+            v.Enabled = false
+            table.insert(Stuff, 1, v)
+        end
+    end
+    
+    if ToDisable.VisualEffects then
+        if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
+            v.Enabled = false
+            table.insert(Stuff, 1, v)
+        end
+    end
+    
+    if ToDisable.Textures then
+        if v:IsA("Decal") or v:IsA("Texture") then
+            v.Texture = ""
+            table.insert(Stuff, 1, v)
+        end
+    end
+    
+    if ToDisable.Sky then
+        if v:IsA("Sky") then
+            v.Parent = nil
+            table.insert(Stuff, 1, v)
+        end
+    end
 end
 
 game:GetService("TestService"):Message("Effects Disabler Script : Successfully disabled "..#Stuff.." assets / effects. Settings :")
 
 for i, v in next, ToDisable do
-	print(tostring(i)..": "..tostring(v))
+    print(tostring(i)..": "..tostring(v))
 end
 
 if ToEnable.FullBright then
