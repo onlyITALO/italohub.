@@ -1,17 +1,17 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "ITALO HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = false})
+local Window = OrionLib:MakeWindow({Name = "ITALO CLIENT", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = false})
 
 
 local ITALOTab = Window:MakeTab({
-	Name = "RESOLUÇÕES",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+    Name = "RESOLUÇÕES",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO PADRÃO",
-	Callback = function()
+    Name = "RESOLUÇÃO PADRÃO",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 1.0
@@ -27,14 +27,14 @@ if getgenv().gg_scripters == nil then
 end
 getgenv().gg_scripters = "Aori0001"
 
-  	end    
+      end    
 })
 
 
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO 0.80",
-	Callback = function()
+    Name = "RESOLUÇÃO 0.80",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.80
@@ -50,14 +50,14 @@ if getgenv().gg_scripters == nil then
 end
 getgenv().gg_scripters = "Aori0001"
 
-  	end    
+      end    
 })
 
 
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO 0.70",
-	Callback = function()
+    Name = "RESOLUÇÃO 0.70",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.70
@@ -73,13 +73,13 @@ if getgenv().gg_scripters == nil then
 end
 getgenv().gg_scripters = "Aori0001"
 
-  	end    
+      end    
 })
 
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO 0.65",
-	Callback = function()
+    Name = "RESOLUÇÃO 0.65",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.65
@@ -96,12 +96,12 @@ end
 getgenv().gg_scripters = "Aori0001"
 
 
-  	end    
+      end    
 })
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO 0.55",
-	Callback = function()
+    Name = "RESOLUÇÃO 0.55",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.55
@@ -117,12 +117,12 @@ if getgenv().gg_scripters == nil then
 end
 getgenv().gg_scripters = "Aori0001"
 
-  	end    
+      end    
 })
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO 0.45",
-	Callback = function()
+    Name = "RESOLUÇÃO 0.45",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.45
@@ -139,12 +139,12 @@ end
 getgenv().gg_scripters = "Aori0001"
 
 
-  	end    
+      end    
 })
 
 ITALOTab:AddButton({
-	Name = "RESOLUÇÃO 0.40",
-	Callback = function()
+    Name = "RESOLUÇÃO 0.40",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.40
@@ -160,14 +160,14 @@ if getgenv().gg_scripters == nil then
 end
 getgenv().gg_scripters = "Aori0001"
 
-  	end    
+      end    
 })
 
 
 
 ITALOTab:AddButton({
-	Name = "TROLL XD",
-	Callback = function()
+    Name = "TROLL XD",
+    Callback = function()
 
 getgenv().Resolution = {
     [".gg/scripters"] = 0.10
@@ -183,7 +183,7 @@ if getgenv().gg_scripters == nil then
 end
 getgenv().gg_scripters = "Aori0001"
 
-  	end    
+      end    
 })
 
 
@@ -670,5 +670,82 @@ mini2.Visible = false
 main.Frame.BackgroundTransparency = 0 
 closebutton.Position = UDim2.new(0, 0, -1, 27)
 end)     
+      end    
+})
+
+
+ITALOTab:AddButton({
+    Name = "Ant-Lag",
+    Callback = function()
+              local ToDisable = {
+	Textures = true,
+	VisualEffects = true,
+	Parts = true,
+	Particles = true,
+	Sky = true
+}
+
+local ToEnable = {
+	FullBright = false
+}
+
+local Stuff = {}
+
+for _, v in next, game:GetDescendants() do
+	if ToDisable.Parts then
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then
+			v.Material = Enum.Material.SmoothPlastic
+			table.insert(Stuff, 1, v)
+		end
+	end
+	
+	if ToDisable.Particles then
+		if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then
+			v.Enabled = false
+			table.insert(Stuff, 1, v)
+		end
+	end
+	
+	if ToDisable.VisualEffects then
+		if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then
+			v.Enabled = false
+			table.insert(Stuff, 1, v)
+		end
+	end
+	
+	if ToDisable.Textures then
+		if v:IsA("Decal") or v:IsA("Texture") then
+			v.Texture = ""
+			table.insert(Stuff, 1, v)
+		end
+	end
+	
+	if ToDisable.Sky then
+		if v:IsA("Sky") then
+			v.Parent = nil
+			table.insert(Stuff, 1, v)
+		end
+	end
+end
+
+game:GetService("TestService"):Message("Effects Disabler Script : Successfully disabled "..#Stuff.." assets / effects. Settings :")
+
+for i, v in next, ToDisable do
+	print(tostring(i)..": "..tostring(v))
+end
+
+if ToEnable.FullBright then
+    local Lighting = game:GetService("Lighting")
+    
+    Lighting.FogColor = Color3.fromRGB(255, 255, 255)
+    Lighting.FogEnd = math.huge
+    Lighting.FogStart = math.huge
+    Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+    Lighting.Brightness = 5
+    Lighting.ColorShift_Bottom = Color3.fromRGB(255, 255, 255)
+    Lighting.ColorShift_Top = Color3.fromRGB(255, 255, 255)
+    Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+    Lighting.Outlines = true
+end
       end    
 })
