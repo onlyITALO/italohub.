@@ -188,47 +188,35 @@ getgenv().gg_scripters = "Aori0001"
 
 
 ITALOTab = Window:MakeTab({
-    Name = "VELOCIDADE",
+    Name = "MOVIMENTAÇÃO",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
 
-ITALOTab:AddButton({
-    Name = "VELOCIDADE PADRÃO",
-    Callback = function()
-              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-      end    
+
+ITALOTab:AddTextbox({
+  Name = "VELOCIDADE",
+  Default = "36",
+  TextDisappear = false,
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+  end      
 })
 
 
-ITALOTab:AddButton({
-    Name = "VELOCIDADE 2X",
-    Callback = function()
-              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
-      end    
+
+
+
+ITALOTab:AddTextbox({
+  Name = "PULO",
+  Default = "36",
+  TextDisappear = false,
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+  end      
 })
 
-ITALOTab:AddButton({
-    Name = "VELOCIDADE 4X",
-    Callback = function()
-              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 64
-      end    
-})
-
-ITALOTab:AddButton({
-    Name = "VELOCIDADE 6X",
-    Callback = function()
-              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 128
-      end    
-})
-
-ITALOTab:AddButton({
-    Name = "VELOCIDADE 8X",
-    Callback = function()
-              game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 236
-      end    
-})
 
 
 local ITALOTab = Window:MakeTab({
