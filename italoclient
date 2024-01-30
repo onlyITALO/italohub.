@@ -1,5 +1,12 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "ITALO CLIENT", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = false})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Mthhx/Mthhx/main/Mth/Library'),true))()
+
+OrionLib:MakeNotification({
+Name = "ITALO CLIENT",Content = "DISCORD: https://discord.com/invite/eWXuJkmDq3 :)",Image = "rbxassetid://4483345998",Time = 20})
+
+OrionLib:MakeNotification({
+Name = "ITALO CLIENT",Content = "ITALO: Obrigado por usar nosso script :)",Image = "rbxassetid://4483345998",Time = 20})
+
+local Window = OrionLib:MakeWindow({Name = "ITALO CLIENT (BETA)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroEnabled = false})
 
 
 local ITALOTab = Window:MakeTab({
@@ -200,7 +207,10 @@ ITALOTab:AddTextbox({
   Default = "36",
   TextDisappear = false,
   Callback = function(Value)
+    while true do
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    task.wait()
+    end
   end      
 })
 
@@ -213,7 +223,10 @@ ITALOTab:AddTextbox({
   Default = "36",
   TextDisappear = false,
   Callback = function(Value)
+    while true do
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    task.wait()
+    end
   end      
 })
 
