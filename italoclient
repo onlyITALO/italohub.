@@ -388,7 +388,7 @@ uselesslabelfour.BackgroundTransparency = 1.000
 uselesslabelfour.Position = UDim2.new(0.0580285639, 0, 0.8125, 0)
 uselesslabelfour.Size = UDim2.new(0, 95, 0, 12)
 uselesslabelfour.Font = Enum.Font.SourceSans
-uselesslabelfour.Text = "https://discord.gg/GHfDbyPZ"
+uselesslabelfour.Text = "https://discord.gg/wNSVgpazsE"
 uselesslabelfour.TextColor3 = Color3.fromRGB(255, 255, 255)
 uselesslabelfour.TextSize = 10.000
 
