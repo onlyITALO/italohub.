@@ -1,12 +1,12 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Mthhx/Mthhx/main/Mth/Library'),true))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/onlyITALO/Library-ITALO/main/ITALO%20LIBRARY?token=GHSAT0AAAAAACNR62GPFNOPNP55SCY3MLLWZOTQGWQ'),true))()
 
 OrionLib:MakeNotification({
-Name = "ITALO CLIENT",Content = "DISCORD: https://discord.com/invite/eWXuJkmDq3 :)",Image = "rbxassetid://4483345998",Time = 10})
+Name = "ITALO CLIENT",Content = "DISCORD: https://discord.gg/wNSVgpazsE",Image = "rbxassetid://4483345998",Time = 10})
 
 OrionLib:MakeNotification({
 Name = "ITALO CLIENT",Content = "ITALO: Obrigado por usar nosso script :)",Image = "rbxassetid://4483345998",Time = 10})
 
-local Window = OrionLib:MakeWindow({Name = "ITALO CLIENT (BETA)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroEnabled = false})
+local Window = OrionLib:MakeWindow({Name = "ITALO CLIENT", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroEnabled = false})
 
 
 local ITALOTab = Window:MakeTab({
@@ -244,7 +244,7 @@ ITALOTab:AddButton({
     Callback = function()
 
 --[[
-FEITO POR FIRE_CLAHS#0000
+FEITO POR onlyitalo_#0000
 ]]
 
 repeat wait() until game:IsLoaded() and game.Players and game.Players.LocalPlayer and game.Players.LocalPlayer.Character
